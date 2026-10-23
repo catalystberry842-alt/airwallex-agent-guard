@@ -9,7 +9,7 @@
     "strict": true,
     "module": "esnext",
     "moduleResolution": "bundler",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "noEmit": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -31,7 +31,8 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
