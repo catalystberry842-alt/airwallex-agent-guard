@@ -1,0 +1,8 @@
+node_modules
+.next
+.env*
+data/audit.jsonl
+data/ledger.json
+.vercel
+*.tsbuildinfo
+next-env.d.ts

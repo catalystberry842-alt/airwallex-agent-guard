@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "perTxLimit": { "USD": 1000, "EUR": 900, "GBP": 800 },
+  "dailyLimit": { "USD": 2500, "EUR": 2000, "GBP": 1800 },
+  "humanApprovalAbove": { "USD": 750, "EUR": 700, "GBP": 600 },
+  "maxTxPerHour": 5,
+  "duplicateWindowMinutes": 1440,
+  "supportedCorridors": [
+    { "currency": "USD", "country": "US", "method": "LOCAL" },
+    { "currency": "EUR", "country": "DE", "method": "LOCAL" },
+    { "currency": "GBP", "country": "GB", "method": "LOCAL" }
+  ],
+  "blockedCurrencies": ["NGN"],
+  "beneficiaries": [
+    {
+      "key": "acme",
+      "aliases": ["acme", "acme supplies", "acme supplies inc"],
+      "airwallexId": "baab4512-f88f-493c-b819-9ff195ff7dfc",
+      "currency": "USD",
+      "country": "US",
+      "method": "LOCAL"
+    },
+    {
+      "key": "de-eur-local",
+      "aliases": ["de eur local", "berlin contractor"],
+      "airwallexId": "6c705be0-a18f-4e8d-baf0-c251dcfa9519",
+      "currency": "EUR",
+      "country": "DE",
+      "method": "LOCAL"
+    }
+  ],
+  "invoices": [
+    { "id": "42", "beneficiary": "acme", "amount": 500, "currency": "USD", "status": "open" },
+    { "id": "43", "beneficiary": "acme", "amount": 5, "currency": "USD", "status": "open" },
+    { "id": "77", "beneficiary": "de-eur-local", "amount": 250, "currency": "EUR", "status": "open" }
+  ],
+  "requireInvoice": true,
+  "injectionPatterns": [
+    "ignore (all |any |the |previous |prior )*(instructions|limits|rules|policy|polic(y|ies))",
+    "override",
+    "bypass",
+    "disregard",
+    "you are now",
+    "system prompt",
+    "developer mode",
+    "no (limit|limits|checks)",
+    "skip (verification|checks|approval)",
+    "new beneficiary",
+    "change (the )?(account|iban|bank)"
+  ]
+}
